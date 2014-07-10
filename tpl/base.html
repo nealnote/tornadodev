@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>base.dev</title>
+{% block static_hd %}{% end %}
+</head>
+<body>
+  {% block content %}{% end %}
+  {% if 0 or handler.settings['debug'] %}
+    <script src="{{ handler.static_dev("lib/jquery.min.js") }}" type="text/javascript"></script>
+    <script src="{{ handler.static_dev("lib/coffee-script.js") }}" type="text/javascript"></script>
+    <script src="{{ handler.static_dev("lib/debug.coffee") }}" type="text/coffeescript"></script>
+  {% end %}
+</body>
+</html>

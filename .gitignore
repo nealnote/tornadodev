@@ -1,0 +1,8 @@
+__pycache__
+*.pyc
+.venv
+.DS_Store
+setting.py
+config.py
+static/tmp/*
+static/upload/*

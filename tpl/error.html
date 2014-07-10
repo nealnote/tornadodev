@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block static_hd %}
+{% if 0 %}
+	<link rel="stylesheet" type="text/css" href="{{ static_url('lib/pygments-css/perldoc.css') }}">
+{% end %}
+{% end %}
+
+{% block content %}
+
+  <h2>error:</h2>
+  {% raw error%}
+
+{% end %}
+
