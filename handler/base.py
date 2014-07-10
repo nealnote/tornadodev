@@ -14,10 +14,6 @@ from tornado.httpclient import AsyncHTTPClient
 from tornado.options import options
 
 
-class base(_base):
-  def initialize(self, **kargs):
-    #self._db = db
-    super(base, self).initialize(**kargs)
 
 class _base(tornado.web.RequestHandler):
   def initialize(self, **kwargs):
@@ -60,6 +56,11 @@ class _base(tornado.web.RequestHandler):
 
   def set_global(self, obj={}):
     return obj
+
+class base(_base):
+  def initialize(self, **kargs):
+    #self._db = db
+    super(base, self).initialize(**kargs)
 
 class proxy(_base):
   # allow javascript cross domain for dev

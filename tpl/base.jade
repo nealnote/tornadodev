@@ -3,10 +3,11 @@ html
   head
     meta(chaset='utf-8')
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    //link(rel="stylesheet", type="text/css", href=static_url('css/aio.css'))
-    script(type="text/javascript", src=static_url("lib/jquery.min.js"))
     title
       block title title
+    link(rel="stylesheet", type="text/css", href=static_url('aio.css'))
+    script(type="text/javascript", src=static_url("lib/jquery.min.js"))
+    block static_hd
   body
     block body
     block footer
